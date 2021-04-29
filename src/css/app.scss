@@ -5,7 +5,7 @@
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 30px;
     .log-head{
         display: flex;
         font-size: 23px;
@@ -93,5 +93,23 @@
         -webkit-text-fill-color: #ffffff;
         -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
         transition: background-color 5000s ease-in-out 0s;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .login-card-area {
+        width: 100%;
+        display: block;
+        .login-card{
+            min-width: auto;
+            padding: 0;
+        }
+        .q-pa-md {
+            padding: 5px;
+        }
+        .log-head{
+            font-size: 18px;
+        }
+
     }
 }

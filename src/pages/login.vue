@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md login-card-area">
-    <div class="q-gutter-md">
+    <div class="">
       <q-card class="my-card login-card">
         <q-card-section>
           <div class="card-data q-gutter-y-lg">
@@ -24,7 +24,7 @@
         </q-card-section>
       </q-card>
 
-     
+      
     </div>
   </div>
 </template>
