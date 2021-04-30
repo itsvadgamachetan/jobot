@@ -41,7 +41,15 @@
                           <span>Sign In to Jobot</span>
                        </div>
                        <q-input outlined v-model="text" label="Email" />
-                       <q-input outlined v-model="password" type="password" float-label="Password" label="Password"/>
+                       <q-input v-model="password" label="Password" outlined :type="isPwd ? 'password' : 'text'">
+                        <template v-slot:append>
+                          <q-icon
+                            :name="isPwd ? 'visibility_off' : 'visibility'"
+                            class="cursor-pointer"
+                            @click="isPwd = !isPwd"
+                          />
+                        </template>
+                      </q-input>
                        <q-btn size="20px" label="Next" class="full-width jt-btn" />
                        <div class="login-link">
                           <a href="#" class="l-link">Contact US</a><span class="q-dot">●</span>
@@ -76,3 +84,13 @@
            </q-card-section>
         </q-card>
 </template>
+<script>
+  export default {
+    data () {
+      return {
+        password: '',
+        isPwd: true
+      }
+    }
+  }
+</script>
