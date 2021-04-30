@@ -33,7 +33,7 @@
 <template>
   <div class="q-pa-md q-login">
      <div>
-        <q-card class="my-card login-card">
+        <q-card class="login-card">
            <q-card-section>
               <div class="row login-item">
                  <div class="login-l">
