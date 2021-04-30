@@ -48,7 +48,7 @@
                        <div class="login-link">
                           <a href="#" class="l-link">Contact US</a><span class="q-dot">●</span>
                           <a href="#" class="l-link">Privacy Policy</a><span class="q-dot">●</span>
-                          <a href="#" class="l-link">Terms & Condictions</a>
+                          <a href="#" class="l-link">Terms &amp; Condictions</a>
                        </div>
                     </div>
                  </div>
