@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 body{font-family:'Poppins',sans-serif;display:flex;justify-content:center;margin-top:30px;box-shadow: none;border-radius: 4px;background: #fff;}
 /* Notification CSS */
-.jb-notify .text-h6{font-weight:400}
+.jb-notify .text-h6{font-weight:400;display: flex;justify-content: flex-start;align-items: center;}
 .jb-notify .text-weight-medium{color:#222}
 .jb-btn{background:#28B2E6;box-shadow:0 1px 6px rgba(0,0,0,0.102);border-radius:4px;cursor:pointer;color:#FFF;padding:0 30px;position:relative;border-radius:4px;font-weight:400;font-size:16px;line-height:20px;font-size:16px;-webkit-transition:all .35s ease;transition:all .35s ease;text-align:center;text-decoration:none;height:40px;max-width:135px;text-transform:capitalize}
 .jb-btn-white{background:#fff;color:#222;box-shadow:0 1px 6px rgba(0,0,0,0.052);border:1px solid #222}
@@ -18,7 +18,7 @@ body{font-family:'Poppins',sans-serif;display:flex;justify-content:center;margin
    <q-card flat bordered class="my-card jb-notify q-ma-lg">
       <q-card-section class="bg-grey-1 text-black">
          <div class="text-h6">
-            <q-avatar size="24px"><img src="../assets/bell.svg" alt="Notification"></q-avatar>
+            <q-avatar square size="20px" class="q-mr-md"><img src="../assets/bell.svg" alt="Notification"></q-avatar>
             Notification preferences
          </div>
       </q-card-section>
