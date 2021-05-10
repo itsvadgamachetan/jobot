@@ -37,7 +37,6 @@ body{font-family:'Nunito', sans-serif;display:flex;justify-content:center;margin
 .jb-featured-job .no-wrap{flex-wrap:nowrap}
 .q-carousel__slide.column.no-wrap{padding-left: 0px;padding-right: 10px;}
 .jb-featured-job .q-col-gutter-y-xl > *,.jb-featured-job .q-col-gutter-xl > *{padding-left: 45px;}}
-
 .jb-featured-job .q-img{width:110px;border-radius:100px!important;margin-top:40px;height:110px}
 .jb-featured-job .q-pt-none.q-card__section{background:#f7f7f7;padding:25px;text-align:left;margin-top:10px}
 .link-color{color:#28b2e6;text-decoration:none}
@@ -296,7 +295,6 @@ body{font-family:'Nunito', sans-serif;display:flex;justify-content:center;margin
                                  </div>
                               </div>
                             </q-carousel-slide>
-
                             <q-carousel-slide :name="2" class="column no-wrap">
                               <div class="row fit justify-start no-wrap q-col-gutter-xl">
                                  <div class="rounded-borders full-height col-md-4 col-12">
@@ -346,18 +344,15 @@ body{font-family:'Nunito', sans-serif;display:flex;justify-content:center;margin
                                  </div>
                               </div>
                             </q-carousel-slide>
-                         
                           </q-carousel>
                         </div>
                   </div>
                </div>
-                     
             </q-page>
          </q-page-container>
       </q-layout>
    </div>
 </template>
-
  <script>
 export default {
   data () {
@@ -366,9 +361,4 @@ export default {
     }
   }
 }
-
-
- 
  </script>
-
- 
