@@ -33,7 +33,17 @@ body{font-family:'Nunito', sans-serif;display:flex;justify-content:center;margin
 .c-box:hover{background:#23b3e7;box-shadow:0 4px 12px rgb(35 179 231 / 20%);border-radius:5px;-webkit-transition:1s;transition:1s}
 .c-box:hover .c-box-content p,.c-box:hover .c-box-content h3{color:#ffffff;-webkit-transition:1s;transition:1s}
 .c-box:hover svg{color:#ffffff;fill:#ffffff;-webkit-transition:1s;transition:1s}
-@media screen and (max-width: 650px) {.c-box{min-height: auto;}}
+@media screen and (max-width: 650px) {.c-box{min-height: auto;}
+.jb-featured-job .no-wrap{flex-wrap:nowrap}
+.q-carousel__slide.column.no-wrap{padding-left: 0px;padding-right: 10px;}
+.jb-featured-job .q-col-gutter-y-xl > *,.jb-featured-job .q-col-gutter-xl > *{padding-left: 45px;}}
+
+.jb-featured-job .q-img{width:110px;border-radius:100px!important;margin-top:40px;height:110px}
+.jb-featured-job .q-pt-none.q-card__section{background:#f7f7f7;padding:25px;text-align:left;margin-top:10px}
+.link-color{color:#28b2e6;text-decoration:none}
+.link-color:hover{opacity:.7}
+.jb-featured-job .q-item__label{font-size:15px}
+.jb-featured-job .q-item__label span{display:block;line-height:25px}
 </style>
 <template>
    <div class="q-pa-md jb-second">
@@ -57,7 +67,7 @@ body{font-family:'Nunito', sans-serif;display:flex;justify-content:center;margin
                            <q-separator inset />
                            <q-card-section>
                               <div class="card flex no-wrap">
-                                 <q-input outlined v-model="text" label="My email" class="full-width" hint="Alerts are free and you can cancel them at any time."/>
+                                 <q-input outlined label="My email" class="full-width" hint="Alerts are free and you can cancel them at any time."/>
                                  <q-btn side class="jb-btn q-ml-md" label="Create New Alert" />
                               </div>
                            </q-card-section>
@@ -216,6 +226,132 @@ body{font-family:'Nunito', sans-serif;display:flex;justify-content:center;margin
                      </a>
                   </div>
                </div>
+               <div class="row q-col-gutter-xl q-mt-lg q-pt-xl">
+                  <div class="col-12">
+                     <div class="jb-s-l">
+                        <h2 class="jb-s-title">Featured Jobot Pros</h2>
+                     </div>
+                  </div>
+                  <div class="col-12 text-center">
+                        <div class="q-pa-md">
+                          <q-carousel
+                            v-model="slide"
+                            transition-prev="slide-right"
+                            transition-next="slide-left"
+                            swipeable
+                            animated
+                            control-color="primary"
+                            padding
+                            arrows
+                            infinite
+                            height="auto"
+                            class="jb-featured-job"
+                          >
+                            <q-carousel-slide :name="1" class="column no-wrap">
+                              <div class="row fit justify-start no-wrap q-col-gutter-xl">
+                                 <div class="rounded-borders full-height col-md-4 col-12">
+                                    <q-card class="my-card">
+                                       <q-img rounded src="https://jobot.imgix.net/pro/reed-kellick-17482421bd159604a5bae6b76c0bee48.jpg" />
+                                       <q-card-section>
+                                         <div class="text-h6">Reed Kellick</div>
+                                         <div class="text-subtitle2 text-grey-7">Senior Recruiting Manager</div>
+                                       </q-card-section>
+                                       <q-card-section class="q-pt-none">
+                                          <q-item-section>
+                                             <q-item-label class="q-mb-md"><span class="text-weight-medium text-grey-7">Accepting Applications:</span><span class="text-black-8 text-weight-bold">52 jobs</span></q-item-label>
+                                             <q-item-label><span class="text-weight-medium text-grey-7">Featured job:</span><a href="#" class="link-color text-weight-medium">Software Engineer</a></q-item-label>
+                                           </q-item-section>
+                                       </q-card-section>
+                                     </q-card>
+                                 </div>
+                                 <div class="rounded-borders full-height col-md-4 col-12">
+                                    <q-card class="my-card">
+                                       <q-img rounded src="https://jobot.imgix.net/pro/jasper-posner-06d1f2f8aa16e874d345aff39da754c7.jpg" />
+                                       <q-card-section>
+                                         <div class="text-h6">Jasper Posner</div>
+                                         <div class="text-subtitle2 text-grey-7">Recruiting Manager</div>
+                                       </q-card-section>
+                                       <q-card-section class="q-pt-none">
+                                          <q-item-section>
+                                             <q-item-label class="q-mb-md"><span class="text-weight-medium text-grey-7">Accepting Applications:</span><span class="text-black-8 text-weight-bold">40 jobs</span></q-item-label>
+                                             <q-item-label><span class="text-weight-medium text-grey-7">Featured job:</span><a href="#" class="link-color text-weight-medium">Software Engineer</a></q-item-label>
+                                           </q-item-section>
+                                       </q-card-section>
+                                     </q-card>
+                                 </div>
+                                 <div class="rounded-borders full-height col-md-4 col-12">
+                                    <q-card class="my-card">
+                                       <q-img rounded src="https://jobot.imgix.net/pro/jaclyn-d-601244e63aaf20be24b4d8fc655d701f.jpg" />
+                                       <q-card-section>
+                                         <div class="text-h6">Jaclyn D'Amore</div>
+                                         <div class="text-subtitle2 text-grey-7">Senior Recruiting Manager</div>
+                                       </q-card-section>
+                                       <q-card-section class="q-pt-none">
+                                          <q-item-section>
+                                             <q-item-label class="q-mb-md"><span class="text-weight-medium text-grey-7">Accepting Applications:</span><span class="text-black-8 text-weight-bold">552 jobs</span></q-item-label>
+                                             <q-item-label><span class="text-weight-medium text-grey-7">Featured job:</span><a href="#" class="link-color text-weight-medium">Electrical Engineer</a></q-item-label>
+                                           </q-item-section>
+                                       </q-card-section>
+                                     </q-card>
+                                 </div>
+                              </div>
+                            </q-carousel-slide>
+
+                            <q-carousel-slide :name="2" class="column no-wrap">
+                              <div class="row fit justify-start no-wrap q-col-gutter-xl">
+                                 <div class="rounded-borders full-height col-md-4 col-12">
+                                    <q-card class="my-card">
+                                       <q-img rounded src="https://jobot.imgix.net/pro/paul-madden-30e8a1b04a39bcb8b497df661d209e78.jpg" />
+                                       <q-card-section>
+                                         <div class="text-h6">Paul Madden</div>
+                                         <div class="text-subtitle2 text-grey-7">Recruiting Manager</div>
+                                       </q-card-section>
+                                       <q-card-section class="q-pt-none">
+                                          <q-item-section>
+                                             <q-item-label class="q-mb-md"><span class="text-weight-medium text-grey-7">Accepting Applications:</span><span class="text-black-8 text-weight-bold">52 jobs</span></q-item-label>
+                                             <q-item-label><span class="text-weight-medium text-grey-7">Featured job:</span><a href="#" class="link-color text-weight-medium">Electrical Engineer</a></q-item-label>
+                                           </q-item-section>
+                                       </q-card-section>
+                                     </q-card>
+                                 </div>
+                                 <div class="rounded-borders full-height col-md-4 col-12">
+                                    <q-card class="my-card">
+                                       <q-img rounded src="https://jobot.imgix.net/pro/eli-mandelbaum-9faa94b02a475c3e3726014a14c7ecb5.jpg" />
+                                       <q-card-section>
+                                         <div class="text-h6">Jasper Posner</div>
+                                         <div class="text-subtitle2 text-grey-7">Recruiting Manager</div>
+                                       </q-card-section>
+                                       <q-card-section class="q-pt-none">
+                                          <q-item-section>
+                                             <q-item-label class="q-mb-md"><span class="text-weight-medium text-grey-7">Accepting Applications:</span><span class="text-black-8 text-weight-bold">32 jobs</span></q-item-label>
+                                             <q-item-label><span class="text-weight-medium text-grey-7">Featured job:</span><a href="#" class="link-color text-weight-medium">Estimator</a></q-item-label>
+                                           </q-item-section>
+                                       </q-card-section>
+                                     </q-card>
+                                 </div>
+                                 <div class="rounded-borders full-height col-md-4 col-12">
+                                    <q-card class="my-card">
+                                       <q-img rounded src="https://jobot.imgix.net/pro/jaclyn-d-601244e63aaf20be24b4d8fc655d701f.jpg" />
+                                       <q-card-section>
+                                         <div class="text-h6">Eli Mandelbaum</div>
+                                         <div class="text-subtitle2 text-grey-7">Principal Recruiter</div>
+                                       </q-card-section>
+                                       <q-card-section class="q-pt-none">
+                                          <q-item-section>
+                                             <q-item-label class="q-mb-md"><span class="text-weight-medium text-grey-7">Accepting Applications:</span><span class="text-black-8 text-weight-bold">72 jobs</span></q-item-label>
+                                             <q-item-label><span class="text-weight-medium text-grey-7">Featured job:</span><a href="#" class="link-color text-weight-medium">Mortgage Closer</a></q-item-label>
+                                           </q-item-section>
+                                       </q-card-section>
+                                     </q-card>
+                                 </div>
+                              </div>
+                            </q-carousel-slide>
+                         
+                          </q-carousel>
+                        </div>
+                  </div>
+               </div>
+                     
             </q-page>
          </q-page-container>
       </q-layout>
@@ -225,11 +361,13 @@ body{font-family:'Nunito', sans-serif;display:flex;justify-content:center;margin
  <script>
 export default {
   data () {
-    return {
-      text: ''
+   return {
+      slide: 1
     }
   }
 }
+
+
  
  </script>
 
