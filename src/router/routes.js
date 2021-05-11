@@ -8,6 +8,7 @@ const routes = [
       { path: '/login', component: () => import('pages/login.vue') },
       { path: '/job-list', component: () => import('pages/job-list.vue') },
       { path: '/landing', component: () => import('pages/landing.vue') },
+      { path: '/pro', component: () => import('pages/pro.vue') },
       { path: '/notification', component: () => import('pages/notification.vue') }
     ]
   },
