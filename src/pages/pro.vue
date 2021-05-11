@@ -55,6 +55,7 @@ body{font-family:'Nunito',sans-serif;display:flex;justify-content:center;margin-
 .jb-container{padding-top: 0;}}
 @media screen and (max-width: 680px) {
 .q-pa-md{padding:0}
+.jb-btn {max-width: initial}
 .jb-list-i{font-size:13px}
 .jb-joblist .col-4{width:100%;margin-top:20px}
 .jb-joblist .col-8{width:100%}
